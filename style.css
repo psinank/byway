@@ -2,8 +2,63 @@ a {
   cursor: pointer;
   text-decoration: none;
 }
-ul {
+ul,
+button {
   list-style: none;
+  font-family: causten-medium;
+}
+
+@font-face {
+  font-family: "causten-regular";
+  src: url("fonts/causten/Causten-Regular.otf") format("woff2");
+}
+@font-face {
+  font-family: "causten-medium";
+  src: url("fonts/causten/Causten-Medium.otf") format("woff2");
+}
+@font-face {
+  font-family: "causten-bold";
+  src: url("fonts/causten/Causten-Bold.otf") format("woff2");
+}
+
+@font-face {
+  font-family: "core-sans-regular";
+  src: url("fonts/core-sans-c/Fontspring-DEMO-coresansc35.otf") format("woff2");
+}
+@font-face {
+  font-family: "core-sans-medium";
+  src: url("fonts/core-sans-c/Fontspring-DEMO-coresansc45.otf") format("woff2");
+}
+@font-face {
+  font-family: "core-sans-bold";
+  src: url("fonts/core-sans-c/Fontspring-DEMO-coresansc65.otf") format("woff2");
+}
+
+@font-face {
+  font-family: "montserrat-regular";
+  src: url("fonts/montserrat/Montserrat-Regular.ttf") format("woff2");
+}
+@font-face {
+  font-family: "montserrat-medium";
+  src: url("fonts/montserrat/Montserrat-Medium.ttf") format("woff2");
+}
+@font-face {
+  font-family: "montserrat-bold";
+  src: url("fonts/montserrat/Montserrat-Bold.ttf") format("woff2");
+}
+
+@font-face {
+  font-family: "poppins-regular";
+  src: url("fonts/poppins/Poppins-Regular.ttf austen-Regular.otf")
+    format("woff2");
+}
+@font-face {
+  font-family: "poppins-medium";
+  src: url("fonts/poppins/Poppins-Medium.ttf austen-Medium.otf") format("woff2");
+}
+@font-face {
+  font-family: "poppins-bold";
+  src: url("fonts/poppins/Poppins-Bold.ttf austen-Bold.otf") format("woff2");
 }
 section.wrapper {
   width: 1450px;
@@ -50,18 +105,18 @@ section.container ul.category {
   justify-content: space-between;
   width: 480px;
   height: 26px;
-  font-family: Causten;
 }
 section.container ul.category li {
   margin-left: 40px;
 }
 section.container ul.category li a {
-  color: #3c4242;
+  color: #807d7e;
   font-size: 22px;
   font-weight: 500;
 }
 section.container ul.category li a:hover {
   font-weight: 700;
+  color: #3c4242;
 }
 section.container div.search {
   background: #f6f6f6;
@@ -69,15 +124,15 @@ section.container div.search {
   margin-left: 200px;
   width: 270px;
 }
-section.container div.search a {
+section.container div.search span {
   display: flex;
   justify-content: space-between;
   padding: 12px 20px;
 }
-section.container div.search a div.left {
+section.container div.search span div.left {
   margin-right: 10px;
 }
-section.container div.search a div.right input {
+section.container div.search span div.right input {
   font-size: 16px;
   color: #807d7e;
   border: none;
@@ -109,6 +164,9 @@ section.home {
   height: 720px;
   display: flex;
   justify-content: center;
+  font-family: core-sans-medium;
+}
+.home .wrapper {
   background-image: url("src/banner.jpg");
   background-repeat: no-repeat;
   background-size: cover;
@@ -116,16 +174,33 @@ section.home {
 }
 section.homepage {
   width: 100%;
-
   height: 716px;
-
   display: flex;
+  justify-content: space-between;
   align-items: center;
 }
+div.arrows {
+  width: 45px;
+  height: 45px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin: 30px;
+  cursor: pointer;
+}
+div.arrows img {
+  display: block;
+  width: 100%;
+}
+div.arrows img.left {
+  transform: rotate(90deg);
+}
+div.arrows img.right {
+  transform: rotate(270deg);
+}
 div.bannertext {
-  width: 440px;
+  width: 1100px;
   height: 455px;
-  margin-left: 195px;
 }
 div.bannertext h4 {
   font-size: 32px;
@@ -136,6 +211,7 @@ div.bannertext h1 {
   font-size: 78px;
   color: #fff;
   margin: 0;
+  font-family: core-sans-bold;
   font-weight: 800;
 }
 div.bannertext h5 {
@@ -159,6 +235,7 @@ section.deals {
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  font-family: core-sans-regular;
 }
 div.deals {
   width: 1240px;
@@ -182,11 +259,13 @@ div.deals div.coziness h6 {
   font-weight: 800;
   font-size: 18px;
   color: #fff;
+  font-family: montserrat-bold;
 }
 div.deals div.coziness h2 {
   font-weight: 800;
   font-size: 34px;
   color: #fff;
+  font-family: core-sans-bold;
 }
 div.deals div.coziness h3 {
   font-weight: 500;
@@ -208,11 +287,13 @@ div.deals div.summer h6 {
   font-weight: 800;
   font-size: 18px;
   color: #fff;
+  font-family: montserrat-bold;
 }
 div.deals div.summer h2 {
   font-weight: 800;
   font-size: 34px;
   color: #fff;
+  font-family: core-sans-bold;
 }
 div.deals div.summer h3 {
   font-weight: 500;
@@ -222,9 +303,10 @@ div.deals div.summer h3 {
 div.deals h6#underline {
   text-decoration: underline;
   cursor: pointer;
+  font-family: core-sans-bold;
 }
 
-section.newarrival {
+section#newarrival {
   width: 100%;
   height: 500px;
   display: flex;
@@ -246,6 +328,7 @@ div.text h6 {
   font-weight: 600;
   margin: 0;
   margin-left: 26px;
+  font-family: core-sans-medium;
 }
 div.text p {
   width: 6px;
@@ -295,6 +378,7 @@ div.newarrival div.items div.item h6 {
   font-weight: 600;
   margin: 0;
   margin-top: 20px;
+  font-family: causten-medium;
 }
 section.everyday {
   width: 100%;
@@ -325,10 +409,12 @@ div.everyday .frame div.headline h1 {
   margin-top: 0;
   font-size: 34px;
   font-weight: 800;
+  font-family: core-sans-bold;
 }
 div.everyday .frame div.headline h4 {
   font-size: 20px;
   font-weight: 300;
+  font-family: causten-regular;
 }
 div.everyday .frame div.headline button {
   width: 168px;
@@ -346,117 +432,123 @@ div.everyday div.rectangle img {
   width: 100%;
   display: block;
 }
-section.formen {
+section#formen {
   width: 100%;
   height: 1055px;
   display: flex;
   justify-content: center;
   margin-top: 100px;
 }
-section.formen div.formen {
+section#formen div.formen {
   width: 1240px;
   height: 1055px;
 }
-section.formen div.formen div.category {
+section#formen div.formen div.category {
   margin-top: 100px;
   width: 1240px;
   height: 952px;
 }
-section.formen div.formen ul {
+section#formen div.formen ul {
   padding: 0;
   display: flex;
   justify-content: space-between;
 }
-section.formen div.formen ul li {
+section#formen div.formen ul li {
   width: 270px;
   height: 452px;
   cursor: pointer;
 }
-section.formen div.formen ul li img.men:hover {
+section#formen div.formen ul li img.men:hover {
   box-shadow: 1px 2px 5px #000000;
   border-radius: 10px;
 }
-section.formen div.formen ul li img.men {
+section#formen div.formen ul li img.men {
   width: 270px;
   height: 394px;
 }
-section.formen div.formen ul li div.frame10 {
+section#formen div.formen ul li div.frame10 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 270px;
   height: 43px;
 }
-section.formen div.formen ul li div.frame10:hover {
+section#formen div.formen ul li div.frame10:hover {
   box-shadow: 0.5px 0.5px 10px #999999;
   border-radius: 10px;
 }
-section.formen div.formen ul li div.frame10 h6 {
+section#formen div.formen ul li div.frame10 h6 {
   margin: 0px;
   font-size: 14px;
   font-weight: 500;
+  font-family: causten-medium;
 }
-section.formen div.formen ul li div.frame10 h3 {
+section#formen div.formen ul li div.frame10 h3 {
   margin: 0;
   font-size: 18px;
   font-weight: 700;
+  font-family: causten-bold;
 }
-section.formen div.formen ul li div.right {
+section#formen div.formen ul li div.right {
   width: 17px;
   border-radius: 2px;
 }
-section.forwomen {
+section#forwomen {
   width: 100%;
   height: 555px;
   display: flex;
   justify-content: center;
   margin-top: 100px;
+  margin-bottom: 50px;
 }
-section.forwomen div.forwomen {
+section#forwomen div.forwomen {
   width: 1240px;
   height: 555px;
 }
-section.forwomen div.forwomen ul {
+section#forwomen div.forwomen ul {
   padding: 0;
   display: flex;
   justify-content: space-between;
   margin-top: 100px;
 }
-section.forwomen div.forwomen ul li {
+section#forwomen div.forwomen ul li {
   width: 270px;
   height: 452px;
   cursor: pointer;
 }
-section.forwomen div.forwomen ul li img.wmen:hover {
+section#forwomen div.forwomen ul li img.wmen:hover {
   box-shadow: 1px 2px 5px #000000;
   border-radius: 10px;
 }
-section.forwomen div.forwomen ul li img.men {
+section#forwomen div.forwomen ul li img.men {
   width: 270px;
   height: 394px;
 }
-section.forwomen div.forwomen ul li div.frame10 {
+section#forwomen div.forwomen ul li div.frame10 {
   display: flex;
   justify-content: space-between;
   align-items: center;
   width: 270px;
   height: 43px;
 }
-section.forwomen div.forwomen ul li div.frame10:hover {
+section#forwomen div.forwomen ul li div.frame10:hover {
   box-shadow: 0.5px 0.5px 10px #999999;
   border-radius: 10px;
 }
-section.forwomen div.forwomen ul li div.frame10 h6 {
+section#forwomen div.forwomen ul li div.frame10 h6 {
   margin: 0px;
   font-size: 14px;
   font-weight: 500;
+
+  font-family: poppins-medium;
 }
-section.forwomen div.forwomen ul li div.frame10 h3 {
+section#forwomen div.forwomen ul li div.frame10 h3 {
   margin: 0;
   font-size: 18px;
-  font-weight: 700;
+  font-weight: 600;
+  font-family: poppins-medium;
 }
-section.forwomen div.forwomen ul li div.right {
+section#forwomen div.forwomen ul li div.right {
   width: 17px;
   border-radius: 2px;
 }
@@ -481,12 +573,14 @@ div.brands span.top {
   font-size: 50px;
   color: #fff;
   font-weight: 800;
+  font-family: core-sans-bold;
 }
 div.brands span.off {
   margin-top: 30px;
   font-size: 22px;
   color: #fff;
   font-weight: 400;
+  font-family: "causten-regular";
 }
 div.brands span.off span.yellow {
   color: #fbd103;
@@ -580,6 +674,7 @@ div.limelight ul li div.frame98 {
 div.limelight ul li div.frame51 {
   display: flex;
   flex-direction: column;
+  font-family: "causten-medium";
 }
 div.limelight ul li div span.topframe {
   width: 165px;
@@ -606,6 +701,8 @@ div.limelight ul li div span.button {
   background: #f6f6f6;
   color: #3c4242;
   font-weight: 700;
+  font-family: "causten-bold";
+
   cursor: pointer;
 }
 span.button:hover {
@@ -642,7 +739,7 @@ div.limelight ul li div div.heart img {
 div.feedbacktest {
   width: 1240px;
   height: 330px;
-  margin-top: 100px;
+  margin-top: 50px;
   display: flex;
   justify-content: space-between;
 }
@@ -652,10 +749,9 @@ div.feedbacktest {
   justify-content: space-around;
   align-items: center;
   background-color: #fff;
-  border: 1px solid #ddd;
+  border: 1.8px solid #bebcbd;
   border-radius: 10px;
   width: 400px;
-  box-shadow: 1px 2px 5px #000000;
 }
 div.feedback-card div.profile {
   width: 350px;
@@ -696,6 +792,7 @@ div.feedback-card div.profile ul.stars img {
   color: #3c4242;
   width: 350px;
   height: 22px;
+  font-family: "core-sans-medium";
 }
 .feedback-card p {
   font-size: 14px;
@@ -704,6 +801,7 @@ div.feedback-card div.profile ul.stars img {
   color: #807d7e;
   width: 351px;
   height: 126px;
+  font-family: "causten-regular";
 }
 
 footer {
@@ -772,6 +870,7 @@ div.footer-column span {
   font-size: 29px;
   font-weight: 700;
   color: #f6f6f6;
+  font-family: "causten-bold";
 }
 div.footer-column p.support {
   margin-top: 40px;
@@ -855,14 +954,16 @@ div.app ul li div.left {
   height: 33px;
 }
 div.app ul li div.right {
-  width: 92px;
+  width: 95px;
   height: 34px;
 }
 div.app ul li div.right span.avail {
   font-size: 10px;
+  font-family: "causten-regular";
 }
 div.app ul li div.right span.device {
   font-size: 18px;
+  font-family: "causten-medium";
 }
 div.popular {
   display: flex;
@@ -884,6 +985,7 @@ div.popular span.popular {
   font-weight: 700;
   margin-left: 80px;
   color: #f6f6f6;
+  font-family: "causten-medium";
 }
 div.popular div {
   width: 17px;
